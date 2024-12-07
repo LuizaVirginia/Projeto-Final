@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Controle - Indústrias Wayne</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('securityGraph').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+        datasets: [{
+          label: 'Incidentes de Segurança',
+          data: [5, 3, 4, 6, 2],
+          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+          }
+        }
+      }
+    });
+  </script>
+  
+
+  <header class="header">
+    <h1>Indústrias Wayne - Painel de Controle</h1>
+  </header>
+  <main class="dashboard">
+    <!-- Segurança -->
+    <section class="card">
+      <h2>Incidentes de Segurança</h2>
+      <div class="chart" id="security-chart">
+        <!-- Gráfico estático ou a ser implementado com JavaScript -->
+        <img src="https://via.placeholder.com/300x200?text=Gráfico+Segurança" alt="Gráfico de Segurança">
+      </div>
+    </section>
+
+    <!-- Recursos -->
+    <section class="card">
+      <h2>Recursos Disponíveis</h2>
+      <div class="chart" id="resources-chart">
+        <!-- Gráfico estático ou a ser implementado com JavaScript -->
+        <img src="https://via.placeholder.com/300x200?text=Gráfico+Recursos" alt="Gráfico de Recursos">
+      </div>
+    </section>
+
+    <!-- Atividades -->
+    <section class="card wide">
+      <h2>Atividades Monitoradas</h2>
+      <div class="chart" id="activities-chart">
+        <!-- Gráfico estático ou a ser implementado com JavaScript -->
+        <img src="https://via.placeholder.com/600x200?text=Gráfico+Atividades" alt="Gráfico de Atividades">
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Indústrias Wayne. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
